@@ -23,7 +23,7 @@ const Orders = async () => {
             <div className="flex gap-20 max-md:flex-col max-md:gap-3">
               <p className="text-base-bold">Order ID: {order._id}</p>
               <p className="text-base-bold">
-                Total Amount: ${order.totalAmount}
+                Total Amount: ₦{order.totalAmount}
               </p>
             </div>
 
@@ -62,11 +62,15 @@ const Orders = async () => {
                     )}
                     <p className="text-small-medium">
                       Unit price:{" "}
-                      <span className="text-small-bold">{orderItem.product.price}</span>
+                      <span className="text-small-bold">
+                        {orderItem.product.price}
+                      </span>
                     </p>
                     <p className="text-small-medium">
                       Quantity:{" "}
-                      <span className="text-small-bold">{orderItem.quantity}</span>
+                      <span className="text-small-bold">
+                        {orderItem.quantity}
+                      </span>
                     </p>
                   </div>
                 </div>
